@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_mask.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,12 +13,13 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Fitness',
       home: Scaffold(
-        appBar: AppBar(),
-        body: Center(
-          child: Text('Hello World'),
+        appBar: AppBar(
+          title: Text('Flutter Fitness'),
+          centerTitle: true,
+          backgroundColor: Colors.green,
         ),
-      ),
-    );
+        body: LoginMask(),
+        ),
+      );
   }
 }
-
