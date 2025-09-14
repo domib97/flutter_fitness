@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
           ),
-          toolbarHeight: 65,
+          toolbarHeight: 60,
         ),
         body: LoginMask(),
         ),

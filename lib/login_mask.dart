@@ -15,14 +15,16 @@ class _LoginMaskState extends State<LoginMask> {
   @override
   Widget build(BuildContext context) {
     return Center(child: SizedBox(
-      width: 300,
+      width: 120,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('Willkommen'),
+          Text('Willkommen!\n\n\nBitte loggen Sie sich ein:'),
           TextField(onChanged: _onChangedUsername),
+          Text('Username'),
           TextField(onChanged: _onChangedPassword, obscureText: true),
-          TextButton(child: Text('Login'), onPressed: _canLogin ? _onPressed : null)
+          Text('Password'),
+          TextButton(child: Text('\n\nLogin'), onPressed: _canLogin ? _onPressed : null)
         ],
       ),
     ),
