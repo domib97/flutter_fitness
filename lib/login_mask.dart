@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 class LoginMask extends StatefulWidget {
   const LoginMask({super.key});
@@ -20,11 +21,11 @@ class _LoginMaskState extends State<LoginMask> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text('Willkommen!\n\n\nBitte loggen Sie sich ein:'),
-          TextField(onChanged: _onChangedUsername),
+          PlatformTextField(onChanged: _onChangedUsername),
           Text('Username'),
-          TextField(onChanged: _onChangedPassword, obscureText: true),
+          PlatformTextField(onChanged: _onChangedPassword, obscureText: true),
           Text('Password'),
-          TextButton(child: Text('\n\nLogin'), onPressed: _canLogin ? _onPressed : null)
+          PlatformTextButton(child: Text('\n\nLogin'), onPressed: _canLogin ? _onPressed : null)
         ],
       ),
     ),

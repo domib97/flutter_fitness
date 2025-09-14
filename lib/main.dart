@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'login_mask.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,20 +12,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return PlatformApp(
       title: 'Flutter Fitness',
-      home: Scaffold(
-        appBar: AppBar(
+      home: PlatformScaffold(
+        appBar: PlatformAppBar(
           title: Text('Flutter Fitness'),
-          centerTitle: true,
-          backgroundColor: Colors.green,
-          foregroundColor: Colors.white,
-          elevation: 15,
-          shadowColor: Colors.black,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
-          ),
-          toolbarHeight: 60,
+          backgroundColor: ThemeData.light().primaryColorLight,
         ),
         body: LoginMask(),
         ),
